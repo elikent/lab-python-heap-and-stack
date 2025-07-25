@@ -1,0 +1,37 @@
+  1           0 LOAD_CONST               0 (0)
+              2 LOAD_CONST               1 (None)
+              4 IMPORT_NAME              0 (dis)
+              6 STORE_NAME               0 (dis)
+
+  3           8 LOAD_CONST               2 (<code object greet at 0x0000014B8ED66130, file "test1.py", line 3>)
+             10 LOAD_CONST               3 ('greet')
+             12 MAKE_FUNCTION            0
+             14 STORE_NAME               1 (greet)
+
+  6          16 LOAD_NAME                2 (print)
+             18 LOAD_NAME                1 (greet)
+             20 LOAD_CONST               4 ('Eli')
+             22 CALL_FUNCTION            1
+             24 CALL_FUNCTION            1
+             26 POP_TOP
+
+  8          28 LOAD_NAME                2 (print)
+             30 LOAD_NAME                0 (dis)
+             32 LOAD_METHOD              3 (Bytecode)
+             34 LOAD_NAME                1 (greet)
+             36 CALL_METHOD              1
+             38 LOAD_METHOD              4 (info)
+             40 CALL_METHOD              0
+             42 CALL_FUNCTION            1
+             44 POP_TOP
+             46 LOAD_CONST               1 (None)
+             48 RETURN_VALUE
+
+Disassembly of <code object greet at 0x0000014B8ED66130, file "test1.py", line 3>:
+  4           0 LOAD_CONST               1 (', ')
+              2 LOAD_METHOD              0 (join)
+              4 LOAD_CONST               2 ('Hello')
+              6 LOAD_FAST                0 (name)
+              8 BUILD_LIST               2
+             10 CALL_METHOD              1
+             12 RETURN_VALUE
